@@ -15,7 +15,6 @@
 
     <name>Commit Skip SCM Behaviour</name>
     <url>https://wiki.jenkins.io/display/JENKINS/Commit+Skip+SCM+Behaviour+Plugins</url>
-    <description>Reactor adding several scm traits (to ignore commits on pull requests) to several SCM implementations.</description>
 
     <licenses>
         <license>
