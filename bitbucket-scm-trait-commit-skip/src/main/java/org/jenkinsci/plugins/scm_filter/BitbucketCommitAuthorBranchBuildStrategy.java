@@ -1,6 +1,6 @@
 package org.jenkinsci.plugins.scm_filter;
 
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.NonNull;
 
 import org.kohsuke.stapler.DataBoundConstructor;
 
@@ -40,7 +40,7 @@ public class BitbucketCommitAuthorBranchBuildStrategy extends CommitAuthorBranch
     public static class DescriptorImpl extends RegexFilterBranchBuildStrategyDescriptor {
 
         @Override
-        @Nonnull
+        @NonNull
         public String getDisplayName() {
             return CommitAuthorBranchBuildStrategy.getDisplayName();
         }
@@ -50,7 +50,7 @@ public class BitbucketCommitAuthorBranchBuildStrategy extends CommitAuthorBranch
          * this is currently never called for organization folders, see JENKINS-54468
          */
         @Override
-        public boolean isApplicable(@Nonnull SCMSourceDescriptor sourceDescriptor) {
+        public boolean isApplicable(@NonNull SCMSourceDescriptor sourceDescriptor) {
             return BitbucketSCMSource.DescriptorImpl.class.isAssignableFrom(sourceDescriptor.getClass());
         }
     }
