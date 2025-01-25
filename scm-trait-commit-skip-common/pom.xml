@@ -12,18 +12,6 @@
 
     <name>Commit Skip SCM Behaviour shared components</name>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-${jenkins.baseline}.x</artifactId>
-                <version>${plugin-bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
