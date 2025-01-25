@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  Allow multibranch Pipelines to ignore commits to Bitbucket branches and pull requests based on the content of commit messages.
+</div>

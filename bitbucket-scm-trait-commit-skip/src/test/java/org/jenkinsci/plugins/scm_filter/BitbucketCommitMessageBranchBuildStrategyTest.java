@@ -12,6 +12,7 @@ import com.cloudbees.jenkins.plugins.bitbucket.BitbucketSCMSource;
 import com.cloudbees.jenkins.plugins.bitbucket.client.branch.BitbucketCloudAuthor;
 import com.cloudbees.jenkins.plugins.bitbucket.client.branch.BitbucketCloudCommit;
 
+import hudson.model.TaskListener;
 import jenkins.scm.api.SCMHead;
 
 public class BitbucketCommitMessageBranchBuildStrategyTest {
@@ -23,7 +24,7 @@ public class BitbucketCommitMessageBranchBuildStrategyTest {
         when(head.getName()).thenReturn("feature/release");
 
         BitbucketSCMSource source = new BitbucketSCMSource("amuniz", "test-repos");
-        assertThat(strategy.isAutomaticBuild(source, head, buildRevision(head), null), equalTo(false));
+        assertThat(strategy.isAutomaticBuild(source, head, buildRevision(head), null, null, TaskListener.NULL), equalTo(false));
     }
 
     @Test
@@ -34,7 +35,7 @@ public class BitbucketCommitMessageBranchBuildStrategyTest {
         when(head.getName()).thenReturn("feature/release");
         
         BitbucketSCMSource source = new BitbucketSCMSource("amuniz", "test-repos");
-        assertThat(strategy.isAutomaticBuild(source, head, buildRevision(head), null), equalTo(true));
+        assertThat(strategy.isAutomaticBuild(source, head, buildRevision(head), null, null, TaskListener.NULL), equalTo(true));
     }
 
     private BitbucketGitSCMRevision buildRevision(SCMHead head) {
