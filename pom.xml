@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <name>Commit Skip SCM Behaviour</name>
-    <url>https://wiki.jenkins.io/display/JENKINS/Commit+Skip+SCM+Behaviour+Plugins</url>
+    <url>https://github.com/jenkinsci/scm-trait-commit-skip-plugin/README.md</url>
 
     <licenses>
         <license>
