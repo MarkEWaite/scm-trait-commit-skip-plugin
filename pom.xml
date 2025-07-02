@@ -29,7 +29,7 @@
         <gitHubRepo>jenkinsci/scm-trait-commit-skip-plugin</gitHubRepo>
         <jenkins.baseline>2.479</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.3</jenkins.version>
-        <plugin-bom.version>4440.v39a_9eb_b_c6b_4d</plugin-bom.version>
+        <plugin-bom.version>4969.v6ffa_18d90c9f</plugin-bom.version>
     </properties>
 
     <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">

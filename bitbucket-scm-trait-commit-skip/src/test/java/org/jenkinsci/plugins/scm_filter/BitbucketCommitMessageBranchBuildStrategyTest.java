@@ -13,6 +13,7 @@ import com.cloudbees.jenkins.plugins.bitbucket.client.branch.BitbucketCloudAutho
 import com.cloudbees.jenkins.plugins.bitbucket.client.branch.BitbucketCloudCommit;
 
 import hudson.model.TaskListener;
+import java.util.List;
 import jenkins.scm.api.SCMHead;
 
 public class BitbucketCommitMessageBranchBuildStrategyTest {
@@ -39,9 +40,11 @@ public class BitbucketCommitMessageBranchBuildStrategyTest {
     }
 
     private BitbucketGitSCMRevision buildRevision(SCMHead head) {
-        BitbucketCloudAuthor author = new BitbucketCloudAuthor();
+        BitbucketCloudAuthor author = new BitbucketCloudAuthor("amuniz");
         author.setRaw("builder <no-reply@acme.com>");
-        BitbucketCloudCommit commit = new BitbucketCloudCommit("initial commit", "2018-09-21T14:57:59.455870+00:00", "12345674890", author);
+        BitbucketCloudAuthor committer = author;
+        List<BitbucketCloudCommit.Parent> parents = null;
+        BitbucketCloudCommit commit = new BitbucketCloudCommit("initial commit", "2018-09-21T14:57:59.455870+00:00", "12345674890", author, committer, parents);
         return new BitbucketGitSCMRevision(head, commit);
     }
 }
